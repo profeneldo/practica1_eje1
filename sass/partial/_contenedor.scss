@@ -1,0 +1,89 @@
+.contenedor {
+	width: 90%;
+	height: 100vh;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas: "header header header header"
+						"nav nav nav nav"
+						"contenido contenido sidebar sidebar"
+						"espacio1 espacio1 espacio2 espacio2"
+						"footer footer footer footer";
+
+
+    @include tablet{
+        .contenedor {
+            grid-template-columns: repeat(3, 1fr);  
+            grid-template-areas: "header header header"
+                            "nav nav nav"
+                            "contenido contenido sidebar"
+                            "espacio1 espacio1 espacio2"
+                            "footer footer footer";
+            
+        }
+    }
+
+
+    .header, .contenido, .sidebar, .espacio1, .espacio2, .footer {
+        padding: 20px;
+        border-radius: 4px;
+        }
+	
+}
+
+.header {
+	background-color: #12203e;
+	grid-area: header;
+}
+
+.contenido {
+	background-color: rgb(163, 13, 143);
+	grid-area: contenido;
+	
+}
+
+.sidebar {
+	
+    background-color: #faa43d;
+	grid-area: sidebar;
+
+    img{
+        width: 100%;
+        margin-top: 10px;
+    
+    }
+	
+}
+
+.espacio1 {
+	background-color: #55a8fd;
+	grid-area: espacio1;
+
+    img{
+        width: 100%;
+        margin-top: 10px;
+    
+    }
+}
+
+.espacio2 {
+
+	background-color: #0b4885;
+	grid-area: espacio2;
+
+    img{
+        width: 100%;
+        margin-top: 10px;
+    
+    }
+}
+
+.footer {
+	
+	background-color: rgb(182, 45, 45);
+	grid-area: footer;
+}
+

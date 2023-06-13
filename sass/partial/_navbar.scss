@@ -1,0 +1,35 @@
+nav{
+	grid-area: nav;
+	padding: 10px;
+	background-color: #12203e;
+	border-radius: 4px;
+
+    ul{
+        display: flex;
+        list-style: none;
+
+        @include tablet{
+         
+                flex-direction: column;
+        
+        }
+    }
+
+    li a{
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 0.5em 1em;
+
+        &:hover{
+            background-color: #faa43d;
+            color: white;
+            border-radius: 4px;
+        }
+    }
+
+
+
+
+
+}
